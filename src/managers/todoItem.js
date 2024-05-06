@@ -1,4 +1,4 @@
-const createTodoItem = (title, description, dueDate, priority) => ({
+const todoItem = (title, description, dueDate, priority) => ({
   title,
   description,
   dueDate,
@@ -10,8 +10,8 @@ const createTodoItem = (title, description, dueDate, priority) => ({
     this.completed = !this.completed;
   },
 
-  toggleProgress() {
-    this.progress = !this.progress;
+  toggleInProgress() {
+    this.inProgress = !this.inProgress;
   },
 
   updateTitle(newTitle) {
@@ -31,4 +31,4 @@ const createTodoItem = (title, description, dueDate, priority) => ({
   },
 });
 
-export default createTodoItem;
+export default todoItem;
