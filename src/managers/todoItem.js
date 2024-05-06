@@ -1,8 +1,8 @@
 const todoItem = (title, description, dueDate, priority) => ({
   title,
   description,
-  dueDate,
-  priority,
+  dueDate: new Date(dueDate),
+  priority: priorityMap[priority.toLowerCase()],
   inProgress: false,
   completed: false,
 
@@ -23,12 +23,18 @@ const todoItem = (title, description, dueDate, priority) => ({
   },
 
   updatePriority(newPriority) {
-    this.priority = newPriority;
+    this.priority = priorityMap[newPriority.toLowerCase()];
   },
 
   updateDueDate(newDueDate) {
     this.dueDate = newDueDate;
   },
 });
+
+const priorityMap = {
+  low: 1,
+  medium: 2,
+  high: 3,
+};
 
 export default todoItem;
