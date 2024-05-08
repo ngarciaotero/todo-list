@@ -1,4 +1,4 @@
-const project = (name, todoList, progress) => ({
+const project = (name, image, todoList, progress) => ({
   name,
   image,
   todoList,
