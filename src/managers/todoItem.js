@@ -7,11 +7,21 @@ const todoItem = (title, description, dueDate, priority) => ({
   completed: false,
 
   toggleComplete() {
-    this.completed = !this.completed;
+    if (this.inProgress) {
+      this.inProgress = false;
+      this.completed = true;
+    } else {
+      this.completed = !this.completed;
+    }
   },
 
   toggleInProgress() {
-    this.inProgress = !this.inProgress;
+    if (this.completed) {
+      this.completed = false;
+      this.inProgress = true;
+    } else {
+      this.inProgress = !this.inProgress;
+    }
   },
 
   updateTitle(newTitle) {
