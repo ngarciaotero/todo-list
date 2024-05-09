@@ -2,7 +2,9 @@ import {
   filterByCompleted,
   filterByInProgress,
   filterByNotStarted,
-} from "../utils/filter";
+} from "../utils/filter.js";
+
+import { sortByDueDate, sortByPriority } from "../utils/sorting.js";
 
 const todoList = () => ({
   todoList: [],
@@ -30,6 +32,26 @@ const todoList = () => ({
   filterItems(filterFunction) {
     const filteredList = this.todoList.filter(filterFunction);
     return filteredList;
+  },
+
+  getDueDateSortedList() {
+    return this.sortItems(sortByDueDate);
+  },
+
+  getPrioritySortedList() {
+    return this.sortItems(sortByPriority);
+  },
+
+  getCompletedFilteredList() {
+    return this.filterItems(filterByCompleted);
+  },
+
+  getInProgressFilteredList() {
+    return this.filterItems(filterByInProgress);
+  },
+
+  getNotStartedFilteredList() {
+    return this.filterItems(filterByNotStarted);
   },
 
   getCompletedPercentage() {
