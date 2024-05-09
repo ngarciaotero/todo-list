@@ -1,8 +1,7 @@
-const project = (name, image, todoList, progress) => ({
+const project = (name, image, todoList) => ({
   name,
   image,
   todoList,
-  progress,
 
   updateName(newName) {
     this.name = newName;
