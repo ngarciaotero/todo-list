@@ -1,0 +1,16 @@
+body {
+  display: grid;
+  grid-template-areas: "sidebar ." "sidebar content";
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+#content {
+  grid-area: content;
+}
+
+.tab {
+  cursor: pointer;
+}
