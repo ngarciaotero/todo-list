@@ -6,10 +6,15 @@ import createAchievementsPage from "./components/achievementsPage.js";
 document.addEventListener("DOMContentLoaded", () => {
   createHomePage();
   const tabs = document.querySelectorAll(".tab");
+  let activeTab = tabs[0];
+  activeTab.classList.add("active");
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-      const tabType = tab.textContent;
+      activeTab.classList.remove("active");
+      tab.classList.add("active");
+      activeTab = tab;
       clearDisplay();
+      const tabType = tab.textContent;
       const pageCreator = pageCreators[tabType];
       pageCreator();
     });
