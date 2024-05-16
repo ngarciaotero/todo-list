@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tab.classList.add("active");
       activeTab = tab;
       clearDisplay();
-      const tabType = tab.textContent;
+      const tabType = tab.textContent.trim().replace(/\s+/g, "");
       const pageCreator = pageCreators[tabType];
       pageCreator();
     });
