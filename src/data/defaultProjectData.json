@@ -1,0 +1,284 @@
+[
+  {
+    "name": "Home Cooking",
+    "path": "src/assets/images/cooking.png",
+    "todoItems": [
+      {
+        "title": "Plan Weekly Menu",
+        "description": "Decide on meals for the upcoming week, considering dietary preferences and available ingredients.",
+        "daysRange": 5,
+        "priority": "Medium"
+      },
+      {
+        "title": "Grocery Shopping",
+        "description": "Compile a shopping list based on the weekly menu plan and make necessary purchases.",
+        "daysRange": 10,
+        "priority": "High"
+      },
+      {
+        "title": "Organize Kitchen Supplies",
+        "description": "Arrange kitchen cabinets and pantry, ensuring easy access to frequently used ingredients and utensils.",
+        "daysRange": 15,
+        "priority": "Low"
+      },
+      {
+        "title": "Try New Recipe",
+        "description": "Experiment with a new dish or cooking technique to add variety to the meal rotation.",
+        "daysRange": 20,
+        "priority": "Medium"
+      },
+      {
+        "title": "Meal Prep Sunday",
+        "description": "Prepare ingredients and meals in advance to streamline cooking during the busy weekdays.",
+        "daysRange": 25,
+        "priority": "High"
+      },
+      {
+        "title": "Clean Refrigerator",
+        "description": "Remove expired items, organize shelves, and wipe down surfaces to maintain freshness and cleanliness.",
+        "daysRange": 30,
+        "priority": "Medium"
+      },
+      {
+        "title": "Research Cooking Techniques",
+        "description": "Study new cooking methods or culinary skills to enhance cooking proficiency and creativity.",
+        "daysRange": 35,
+        "priority": "Low"
+      },
+      {
+        "title": "Cook For The Family",
+        "description": "Study new cooking methods or culinary skills to enhance cooking proficiency and creativity.",
+        "daysRange": 40,
+        "priority": "Low"
+      }
+    ]
+  },
+  {
+    "name": "Backpacking Across Europe",
+    "path": "src/assets/images/luggage.png",
+    "todoItems": [
+      {
+        "title": "Research Destinations",
+        "description": "Explore various European cities and attractions to create an itinerary that suits personal interests and budget.",
+        "daysRange": 5,
+        "priority": "High"
+      },
+      {
+        "title": "Book Accommodations",
+        "description": "Reserve hostels, hotels, or other lodging options for each destination along the backpacking route.",
+        "daysRange": 10,
+        "priority": "High"
+      },
+      {
+        "title": "Plan Transportation",
+        "description": "Arrange flights, train tickets, or other modes of transportation between cities, considering cost and travel time.",
+        "daysRange": 15,
+        "priority": "Medium"
+      },
+      {
+        "title": "Pack Essentials",
+        "description": "Create a packing list of clothing, toiletries, travel documents, and other necessities for the journey.",
+        "daysRange": 20,
+        "priority": "High"
+      },
+      {
+        "title": "Learn Basic Phrases",
+        "description": "Study key phrases in the languages of countries to be visited to facilitate communication with locals.",
+        "daysRange": 25,
+        "priority": "Low"
+      },
+      {
+        "title": "Budget Planning",
+        "description": "Estimate daily expenses for accommodations, meals, transportation, and activities to stay within budget constraints.",
+        "daysRange": 30,
+        "priority": "Medium"
+      },
+      {
+        "title": "Explore Cultural Activities",
+        "description": "Research museums, landmarks, festivals, and cultural events to immerse oneself in the local culture of each destination.",
+        "daysRange": 35,
+        "priority": "Medium"
+      },
+      {
+        "title": "Emergency Preparedness",
+        "description": "Compile a list of emergency contacts, purchase travel insurance, and familiarize oneself with local emergency services.",
+        "daysRange": 40,
+        "priority": "High"
+      }
+    ]
+  },
+  {
+    "name": "Financial Literacy",
+    "path": "src/assets/images/budget.png",
+    "todoItems": [
+      {
+        "title": "Learn Budgeting Basics",
+        "description": "Research and understand the fundamentals of budgeting.",
+        "daysRange": 5,
+        "priority": "Medium"
+      },
+      {
+        "title": "Save Money Tips",
+        "description": "Explore various methods and tips for saving money effectively.",
+        "daysRange": 10,
+        "priority": "High"
+      },
+      {
+        "title": "Understanding interest rates",
+        "description": "Learn how interest rates work and their impact on savings and loans.",
+        "daysRange": 15,
+        "priority": "Medium"
+      },
+      {
+        "title": "Investing Basics",
+        "description": "Study the basic principles of investing in stocks, bonds, and other assets.",
+        "daysRange": 20,
+        "priority": "High"
+      },
+      {
+        "title": "Debt management strategies",
+        "description": "Discover strategies for managing and reducing debt.",
+        "daysRange": 25,
+        "priority": "High"
+      },
+      {
+        "title": "Tax planning strategies",
+        "description": "Explore tax-saving strategies and deductions.",
+        "daysRange": 30,
+        "priority": "High"
+      },
+      {
+        "title": "Emergency fund setup",
+        "description": "Create a plan for building and maintaining an emergency fund.",
+        "daysRange": 35,
+        "priority": "Medium"
+      },
+      {
+        "title": "Financial goal setting",
+        "description": "Set short-term and long-term financial goals.",
+        "daysRange": 40,
+        "priority": "Low"
+      }
+    ]
+  },
+  {
+    "name": "Fitness Challenge",
+    "path": "src/assets/images/dumbbell.png",
+    "todoItems": [
+      {
+        "title": "Set Fitness Goals",
+        "description": "Define specific and achievable fitness goals for the challenge.",
+        "daysRange": 5,
+        "priority": "High"
+      },
+      {
+        "title": "Create Workout Plan",
+        "description": "Design a workout plan that includes cardio, strength training, and flexibility exercises.",
+        "daysRange": 10,
+        "priority": "High"
+      },
+      {
+        "title": "Plan Meal Prep",
+        "description": "Research and plan healthy meals to support your fitness goals throughout the challenge.",
+        "daysRange": 15,
+        "priority": "Medium"
+      },
+      {
+        "title": "Track Progress",
+        "description": "Set up a system to track your workouts, meals, and progress towards your fitness goals.",
+        "daysRange": 20,
+        "priority": "Medium"
+      },
+      {
+        "title": "Join Fitness Classes",
+        "description": "Explore and sign up for fitness classes or group workouts to stay motivated and try new activities.",
+        "daysRange": 25,
+        "priority": "Medium"
+      },
+      {
+        "title": "Incorporate Rest Days",
+        "description": "Schedule regular rest days into your workout plan to prevent burnout and allow for muscle recovery.",
+        "daysRange": 30,
+        "priority": "Low"
+      },
+      {
+        "title": "Monitor Nutrition",
+        "description": "Keep track of your daily calorie intake and macronutrient balance to support your fitness goals.",
+        "daysRange": 35,
+        "priority": "Medium"
+      },
+      {
+        "title": "Celebrate Milestones",
+        "description": "Celebrate your progress by acknowledging and rewarding yourself for reaching fitness milestones along the way.",
+        "daysRange": 40,
+        "priority": "Low"
+      }
+    ]
+  },
+  {
+    "name": "Coding Interviews",
+    "path": "src/assets/images/script.png",
+    "todoItems": [
+      {
+        "title": "Study data structures",
+        "description": "Review and understand various data structures such as arrays, linked lists, stacks, and queues.",
+        "daysRange": 5,
+        "priority": "High"
+      },
+      {
+        "title": "Learn algorithms",
+        "description": "Study common algorithms like sorting, searching, and dynamic programming to solve coding problems efficiently.",
+        "daysRange": 10,
+        "priority": "High"
+      },
+      {
+        "title": "Practice coding challenges",
+        "description": "Solve coding problems regularly on platforms like LeetCode or HackerRank to improve problem-solving skills.",
+        "daysRange": 15,
+        "priority": "High"
+      },
+      {
+        "title": "Review time complexity",
+        "description": "Refresh knowledge on time complexity analysis to evaluate the efficiency of algorithms.",
+        "daysRange": 20,
+        "priority": "Medium"
+      },
+      {
+        "title": "Mock interviews",
+        "description": "Participate in mock interviews to simulate real interview scenarios and receive feedback on performance.",
+        "daysRange": 25,
+        "priority": "High"
+      },
+      {
+        "title": "Improve coding speed",
+        "description": "Practice coding under time constraints to enhance speed and accuracy during coding interviews.",
+        "daysRange": 30,
+        "priority": "Medium"
+      },
+      {
+        "title": "Master a programming language",
+        "description": "Deepen understanding of a programming language of choice (e.g., Python, Java, JavaScript) to write clean and efficient code.",
+        "daysRange": 35,
+        "priority": "High"
+      },
+      {
+        "title": "Solve problem-solving patterns",
+        "description": "Learn common problem-solving patterns such as two pointers, sliding window, and binary search to tackle coding challenges effectively.",
+        "daysRange": 40,
+        "priority": "Medium"
+      },
+      {
+        "title": "Enhance debugging skills",
+        "description": "Develop techniques for debugging code efficiently to identify and fix errors quickly.",
+        "daysRange": 45,
+        "priority": "Low"
+      },
+      {
+        "title": "Stay updated with tech trends",
+        "description": "Stay informed about industry trends, new technologies, and interview formats to adapt and prepare effectively.",
+        "daysRange": 50,
+        "priority": "Low"
+      }
+    ]
+  }
+]
