@@ -34,6 +34,10 @@ const todoList = () => ({
     return filteredList;
   },
 
+  getTodoItems() {
+    return this.todoList;
+  },
+
   getDueDateSortedList() {
     return this.sortItems(sortByDueDate);
   },

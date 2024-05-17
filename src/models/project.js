@@ -1,6 +1,6 @@
-const project = (name, image, todoList) => ({
+const project = (name, imagePath, todoList) => ({
   name,
-  image,
+  imagePath,
   todoList,
 
   updateName(newName) {
@@ -8,7 +8,19 @@ const project = (name, image, todoList) => ({
   },
 
   updateImage(newImage) {
-    this.image = newImage;
+    this.imagePath = newImage;
+  },
+
+  getName() {
+    return this.name;
+  },
+
+  getImagePath() {
+    return this.imagePath;
+  },
+
+  getTodoList() {
+    return this.todoList;
   },
 });
 

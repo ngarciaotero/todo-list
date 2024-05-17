@@ -1,10 +1,16 @@
-const todoItem = (title, description, dueDate, priority) => ({
+const todoItem = (
+  title,
+  description,
+  dueDate,
+  priority,
+  status = "pending"
+) => ({
   title,
   description,
   dueDate: new Date(dueDate),
   priority: priorityMap[priority.toLowerCase()],
-  inProgress: false,
-  completed: false,
+  inProgress: statusMap[status].inProgress,
+  completed: statusMap[status].completed,
 
   toggleComplete() {
     if (this.inProgress) {
@@ -45,6 +51,12 @@ const priorityMap = {
   low: 1,
   medium: 2,
   high: 3,
+};
+
+const statusMap = {
+  pending: { inProgress: false, completed: false },
+  inProgress: { inProgress: true, completed: false },
+  complete: { inProgress: false, completed: true },
 };
 
 export default todoItem;
