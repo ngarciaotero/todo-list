@@ -1,7 +1,7 @@
 [
   {
     "name": "Home Cooking",
-    "path": "src/assets/images/cooking.png",
+    "path": "cooking.png",
     "todoItems": [
       {
         "title": "Plan Weekly Menu",
@@ -55,7 +55,7 @@
   },
   {
     "name": "Backpacking Across Europe",
-    "path": "src/assets/images/luggage.png",
+    "path": "luggage.png",
     "todoItems": [
       {
         "title": "Research Destinations",
@@ -109,7 +109,7 @@
   },
   {
     "name": "Financial Literacy",
-    "path": "src/assets/images/budget.png",
+    "path": "budget.png",
     "todoItems": [
       {
         "title": "Learn Budgeting Basics",
@@ -163,7 +163,7 @@
   },
   {
     "name": "Fitness Challenge",
-    "path": "src/assets/images/dumbbell.png",
+    "path": "dumbbell.png",
     "todoItems": [
       {
         "title": "Set Fitness Goals",
@@ -217,7 +217,7 @@
   },
   {
     "name": "Coding Interviews",
-    "path": "src/assets/images/script.png",
+    "path": "script.png",
     "todoItems": [
       {
         "title": "Study data structures",
