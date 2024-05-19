@@ -280,5 +280,401 @@
         "priority": "Low"
       }
     ]
+  },
+  {
+    "name": "Home Renovations",
+    "path": "renovation.png",
+    "todoItems": [
+      {
+        "title": "Research design ideas",
+        "description": "Explore various design styles and gather inspiration for the renovation project.",
+        "daysRange": 5,
+        "priority": "High"
+      },
+      {
+        "title": "Create a budget plan",
+        "description": "Estimate the costs of materials, labor, and other expenses, and set a realistic budget.",
+        "daysRange": 10,
+        "priority": "High"
+      },
+      {
+        "title": "Obtain necessary permits",
+        "description": "Research and apply for any required permits from local authorities for the renovation work.",
+        "daysRange": 15,
+        "priority": "High"
+      },
+      {
+        "title": "Hire contractors",
+        "description": "Interview and hire reliable contractors for the different aspects of the renovation project.",
+        "daysRange": 20,
+        "priority": "High"
+      },
+      {
+        "title": "Order materials",
+        "description": "Purchase high-quality materials such as tiles, flooring, paint, and fixtures.",
+        "daysRange": 25,
+        "priority": "Medium"
+      },
+      {
+        "title": "Prepare for disruptions",
+        "description": "Make arrangements for temporary living accommodations or alternative work setups during the renovation.",
+        "daysRange": 30,
+        "priority": "Medium"
+      },
+      {
+        "title": "Manage project timeline",
+        "description": "Closely monitor the progress of the renovation and ensure it stays on schedule.",
+        "daysRange": 35,
+        "priority": "High"
+      },
+      {
+        "title": "Decorate and furnish",
+        "description": "Select furniture, accessories, and artwork that complement the new design and enhance the living space.",
+        "daysRange": 40,
+        "priority": "Medium"
+      },
+      {
+        "title": "Conduct final inspections",
+        "description": "Inspect the completed work and ensure all aspects of the renovation meet quality standards.",
+        "daysRange": 45,
+        "priority": "High"
+      },
+      {
+        "title": "Celebrate completion",
+        "description": "Host a housewarming party or gathering to showcase the renovated space and enjoy the fruits of your labor.",
+        "daysRange": 50,
+        "priority": "Low"
+      }
+    ]
+  },
+  {
+    "name": "Sustainable Gardening",
+    "path": "gardening.png",
+    "todoItems": [
+      {
+        "title": "Research plant varieties",
+        "description": "Explore different types of plants suitable for your climate and gardening goals.",
+        "daysRange": 5,
+        "priority": "High"
+      },
+      {
+        "title": "Plan garden layout",
+        "description": "Design the layout of your garden, considering factors like sunlight, soil conditions, and plant compatibility.",
+        "daysRange": 10,
+        "priority": "Medium"
+      },
+      {
+        "title": "Prepare the soil",
+        "description": "Enrich the soil with organic matter and ensure proper drainage for optimal plant growth.",
+        "daysRange": 15,
+        "priority": "High"
+      },
+      {
+        "title": "Implement water-saving strategies",
+        "description": "Explore and implement techniques like rainwater harvesting, drip irrigation, and mulching to conserve water.",
+        "daysRange": 20,
+        "priority": "Medium"
+      },
+      {
+        "title": "Establish composting system",
+        "description": "Set up a composting system to recycle organic waste and create nutrient-rich fertilizer for your garden.",
+        "daysRange": 25,
+        "priority": "Medium"
+      },
+      {
+        "title": "Plant vegetables and herbs",
+        "description": "Cultivate a variety of vegetables, herbs, and edible plants for fresh, organic produce.",
+        "daysRange": 30,
+        "priority": "High"
+      },
+      {
+        "title": "Incorporate natural pest control",
+        "description": "Implement eco-friendly pest control methods, such as companion planting or introducing beneficial insects.",
+        "daysRange": 35,
+        "priority": "Medium"
+      },
+      {
+        "title": "Mulch and weed regularly",
+        "description": "Maintain the garden by applying mulch to retain moisture and regularly removing unwanted weeds.",
+        "daysRange": 40,
+        "priority": "High"
+      },
+      {
+        "title": "Learn about seed saving",
+        "description": "Explore techniques for collecting and storing seeds from your own plants for future use.",
+        "daysRange": 45,
+        "priority": "Low"
+      },
+      {
+        "title": "Engage the community",
+        "description": "Share your gardening knowledge and experiences with others, fostering a sense of community.",
+        "daysRange": 50,
+        "priority": "Low"
+      }
+    ]
+  },
+  {
+    "name": "Learn Greek",
+    "path": "languages.png",
+    "todoItems": [
+      {
+        "title": "Set language learning goals",
+        "description": "Define your language learning goals, such as fluency level, specific skills (reading, writing, speaking), or purposes (travel, work, etc.).",
+        "daysRange": 5,
+        "priority": "High"
+      },
+      {
+        "title": "Choose a language learning method",
+        "description": "Explore different language learning methods (e.g., classes, apps, books, immersion) and select the approach that suits you best.",
+        "daysRange": 10,
+        "priority": "High"
+      },
+      {
+        "title": "Build a vocabulary base",
+        "description": "Start learning common words and phrases in the target language, focusing on vocabulary relevant to your goals.",
+        "daysRange": 15,
+        "priority": "High"
+      },
+      {
+        "title": "Practice pronunciation",
+        "description": "Work on proper pronunciation by listening to native speakers and repeating words and phrases out loud.",
+        "daysRange": 20,
+        "priority": "Medium"
+      },
+      {
+        "title": "Immerse yourself in the language",
+        "description": "Expose yourself to the language through movies, music, books, or conversations with native speakers to improve comprehension.",
+        "daysRange": 25,
+        "priority": "Medium"
+      },
+      {
+        "title": "Study grammar rules",
+        "description": "Learn the grammar rules and structures of the language to construct proper sentences and communicate effectively.",
+        "daysRange": 30,
+        "priority": "Medium"
+      },
+      {
+        "title": "Practice writing and speaking",
+        "description": "Regularly practice writing and speaking in the target language to reinforce your skills and gain confidence.",
+        "daysRange": 35,
+        "priority": "High"
+      },
+      {
+        "title": "Find language exchange partners",
+        "description": "Connect with native speakers or fellow learners for language exchange conversations to practice in a realistic setting.",
+        "daysRange": 40,
+        "priority": "Medium"
+      },
+      {
+        "title": "Attend language meetups or classes",
+        "description": "Participate in language meetups or classes to practice with others and receive feedback from instructors or more advanced learners.",
+        "daysRange": 45,
+        "priority": "Low"
+      },
+      {
+        "title": "Celebrate your progress",
+        "description": "Recognize and celebrate your language learning milestones to stay motivated and encouraged throughout the journey.",
+        "daysRange": 50,
+        "priority": "Low"
+      }
+    ]
+  },
+  {
+    "name": "Entrepreneurial Ventures",
+    "path": "presentation.png",
+    "todoItems": [
+      {
+        "title": "Identify a business idea",
+        "description": "Brainstorm and research potential business ideas that align with your interests, skills, and market demands.",
+        "daysRange": 5,
+        "priority": "High"
+      },
+      {
+        "title": "Conduct market research",
+        "description": "Analyze the market, target audience, competitors, and potential challenges to validate your business idea.",
+        "daysRange": 10,
+        "priority": "High"
+      },
+      {
+        "title": "Develop a business plan",
+        "description": "Create a comprehensive business plan outlining your business model, strategies, financial projections, and growth plans.",
+        "daysRange": 15,
+        "priority": "High"
+      },
+      {
+        "title": "Secure funding",
+        "description": "Explore different funding options, such as personal savings, loans, investors, or crowdfunding platforms, to finance your venture.",
+        "daysRange": 20,
+        "priority": "Medium"
+      },
+      {
+        "title": "Build a team",
+        "description": "Identify and recruit talented individuals with complementary skills to join your entrepreneurial team.",
+        "daysRange": 25,
+        "priority": "Medium"
+      },
+      {
+        "title": "Establish legal and financial structures",
+        "description": "Register your business, obtain necessary licenses and permits, and set up accounting and tax systems.",
+        "daysRange": 30,
+        "priority": "High"
+      },
+      {
+        "title": "Develop a marketing strategy",
+        "description": "Create a marketing plan to promote your products or services and reach your target audience effectively.",
+        "daysRange": 35,
+        "priority": "Medium"
+      },
+      {
+        "title": "Launch and iterate",
+        "description": "Officially launch your business, gather customer feedback, and continuously improve your offerings based on market demands.",
+        "daysRange": 40,
+        "priority": "High"
+      },
+      {
+        "title": "Explore growth opportunities",
+        "description": "Identify and pursue growth opportunities, such as expanding into new markets, forming strategic partnerships, or introducing new products or services.",
+        "daysRange": 45,
+        "priority": "Medium"
+      },
+      {
+        "title": "Build a strong company culture",
+        "description": "Cultivate a positive and inclusive company culture that fosters innovation, creativity, and employee satisfaction.",
+        "daysRange": 50,
+        "priority": "Low"
+      }
+    ]
+  },
+  {
+    "name": "Creative Writing",
+    "path": "writing.png",
+    "todoItems": [
+      {
+        "title": "Explore writing genres",
+        "description": "Research and experiment with different genres of writing, such as fiction, poetry, screenwriting, or journalism.",
+        "daysRange": 5,
+        "priority": "High"
+      },
+      {
+        "title": "Develop writing habits",
+        "description": "Establish a consistent writing routine and set achievable goals, such as writing a certain number of words or pages per day.",
+        "daysRange": 10,
+        "priority": "High"
+      },
+      {
+        "title": "Build a writing portfolio",
+        "description": "Compile your best writing pieces into a portfolio to showcase your skills and track your progress.",
+        "daysRange": 15,
+        "priority": "Medium"
+      },
+      {
+        "title": "Study writing techniques",
+        "description": "Learn various writing techniques, such as character development, world-building, dialogue, and plot structure.",
+        "daysRange": 20,
+        "priority": "Medium"
+      },
+      {
+        "title": "Read extensively",
+        "description": "Read widely across different genres and styles to gain inspiration and improve your writing skills.",
+        "daysRange": 25,
+        "priority": "High"
+      },
+      {
+        "title": "Join a writing group",
+        "description": "Participate in a local or online writing group to receive feedback, support, and motivation from fellow writers.",
+        "daysRange": 30,
+        "priority": "Low"
+      },
+      {
+        "title": "Attend writing workshops",
+        "description": "Enroll in writing workshops or classes to learn from experienced authors and receive guidance on your craft.",
+        "daysRange": 35,
+        "priority": "Medium"
+      },
+      {
+        "title": "Explore publishing opportunities",
+        "description": "Research traditional and self-publishing options, submission guidelines, and literary agents or publishers.",
+        "daysRange": 40,
+        "priority": "Medium"
+      },
+      {
+        "title": "Build an online presence",
+        "description": "Create a website or blog to showcase your writing, connect with readers, and promote your work.",
+        "daysRange": 45,
+        "priority": "Low"
+      },
+      {
+        "title": "Cultivate perseverance",
+        "description": "Embrace the writing journey with patience and perseverance, as mastering the craft takes time and dedication.",
+        "daysRange": 50,
+        "priority": "High"
+      }
+    ]
+  },
+  {
+    "name": "Painting Endeavour",
+    "path": "paint.png",
+    "todoItems": [
+      {
+        "title": "Define your painting style",
+        "description": "Explore different painting styles and techniques to find the one that resonates with you the most, whether it's abstract, realism, impressionism, or any other genre.",
+        "daysRange": 5,
+        "priority": "High"
+      },
+      {
+        "title": "Gather art supplies",
+        "description": "Stock up on essential supplies like canvas, paints, brushes, palettes, and any other materials you might need for your preferred painting style.",
+        "daysRange": 10,
+        "priority": "High"
+      },
+      {
+        "title": "Set up your workspace",
+        "description": "Create a dedicated workspace for painting, ensuring proper lighting, ventilation, and organization for your materials and tools.",
+        "daysRange": 15,
+        "priority": "Medium"
+      },
+      {
+        "title": "Study color theory",
+        "description": "Learn about color theory, including color mixing, harmonies, and the psychological impact of different color combinations, to enhance your painting skills.",
+        "daysRange": 20,
+        "priority": "Medium"
+      },
+      {
+        "title": "Practice sketching and drawing",
+        "description": "Develop your drawing skills by practicing sketching and drawing techniques, as these will help you plan compositions and improve your overall painting abilities.",
+        "daysRange": 25,
+        "priority": "Medium"
+      },
+      {
+        "title": "Explore subject matter",
+        "description": "Decide on the subject matter you want to focus on, whether it's landscapes, portraits, still life, or abstract compositions.",
+        "daysRange": 30,
+        "priority": "High"
+      },
+      {
+        "title": "Study composition principles",
+        "description": "Learn about composition principles, such as the rule of thirds, leading lines, and balance, to create visually appealing and well-structured paintings.",
+        "daysRange": 35,
+        "priority": "Medium"
+      },
+      {
+        "title": "Experiment with different techniques",
+        "description": "Try out various painting techniques like impasto, glazing, sgraffito, or palette knife painting to add depth and texture to your works.",
+        "daysRange": 40,
+        "priority": "Medium"
+      },
+      {
+        "title": "Participate in art communities",
+        "description": "Join local art groups, online forums, or attend workshops to connect with other artists, share your work, and receive constructive feedback.",
+        "daysRange": 45,
+        "priority": "Low"
+      },
+      {
+        "title": "Organize an exhibition",
+        "description": "Plan and organize an exhibition or art show to showcase your paintings and share your artistic journey with others.",
+        "daysRange": 50,
+        "priority": "Low"
+      }
+    ]
   }
 ]

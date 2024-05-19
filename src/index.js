@@ -2,10 +2,11 @@ import "./assets/styles/main.css";
 import createHomePage from "./components/homePage.js";
 import createAllProjectsPage from "./components/allProjectsPage.js";
 import createAchievementsPage from "./components/achievementsPage.js";
-import dataToStore from "./services/projectLocalStorage.js";
+import { initializeDefaultProjectData } from "./services/projectLocalStorage.js";
+
+initializeDefaultProjectData();
 
 document.addEventListener("DOMContentLoaded", () => {
-  dataToStore;
   createHomePage();
   const tabs = document.querySelectorAll(".tab");
   let activeTab = tabs[0];
@@ -31,5 +32,7 @@ const pageCreators = {
 
 const clearDisplay = () => {
   const contentDiv = document.querySelector("#content");
+  const titleDiv = document.querySelector(".page-title");
   contentDiv.innerHTML = "";
+  titleDiv.innerHTML = "";
 };
