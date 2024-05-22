@@ -5,6 +5,7 @@
   --mid-blue: rgb(63, 114, 175);
   --light-blue: rgb(219, 226, 239);
   --cream: rgb(252, 248, 236);
+  --green: rgb(76, 175, 80);
 }
 
 body {
@@ -178,7 +179,7 @@ body {
 
 .progress-bar-completed {
   height: 100%;
-  background-color: #4caf50;
+  background-color: var(--green);
   text-align: center;
   border-radius: 40px;
 }
