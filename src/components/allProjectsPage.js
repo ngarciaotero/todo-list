@@ -6,6 +6,7 @@ import {
   createProjectFromData,
   createProjectFromInput,
 } from "../services/projectFactory.js";
+import { createProjectPage } from "./projectPage.js";
 
 const createAllProjectsPage = () => {
   const contentContainer = document.querySelector("#content");
@@ -60,6 +61,10 @@ const createProjectDisplayBox = (project) => {
   projectContainer.appendChild(projectHeader);
   projectContainer.appendChild(projectImage);
   projectContainer.appendChild(createProgressBar(projectPercentComplete));
+
+  projectContainer.addEventListener("click", () =>
+    createProjectPage(project, createAllProjectsPage)
+  );
 
   return projectContainer;
 };
