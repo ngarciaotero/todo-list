@@ -294,3 +294,24 @@ input[type="file"],
 input[type="text"] {
   font-family: "Grandstander", Arial, Helvetica, sans-serif;
 }
+
+.project-dashboard {
+  display: grid;
+  grid-template-areas: "back-button back-button" "badges stats" "todo-list stats";
+}
+
+.back-button {
+  grid-area: back-button;
+}
+
+.badge-container {
+  grid-area: badges;
+}
+
+.stats-container {
+  grid-area: stats;
+}
+
+.todo-list-container {
+  grid-area: todo-list;
+}
