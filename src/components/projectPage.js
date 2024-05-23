@@ -33,9 +33,20 @@ const createImgTitle = (path) => {
 const createProjectDashboard = (project, previousPage) => {
   const dashboardContainer = document.createElement("div");
   dashboardContainer.classList.add("project-dashboard");
+
+  const completedPercentage = project.getTodoList().getCompletedPercentage();
+  const inProgressPercentage = project.getTodoList().getInProgressPercentage();
+  const notStartedPercentage = project.getTodoList().getNotStartedPercentage();
+
   dashboardContainer.appendChild(createBackBtn(previousPage));
   dashboardContainer.appendChild(createBadgesContainer());
-  dashboardContainer.appendChild(createStatsContainer(project));
+  dashboardContainer.appendChild(
+    createStatsContainer(
+      completedPercentage,
+      inProgressPercentage,
+      notStartedPercentage
+    )
+  );
   dashboardContainer.appendChild(createTodoListContainer());
   return dashboardContainer;
 };
@@ -59,15 +70,53 @@ const createBadgesContainer = () => {
   return badgeContainer;
 };
 
-const createStatsContainer = (project) => {
+const createStatsContainer = (
+  completedPercentage,
+  inProgressPercentage,
+  notStartedPercentage
+) => {
   const statsContainer = document.createElement("div");
   statsContainer.classList.add("stats-container");
+
+  statsContainer.appendChild(
+    createProgressContainer(completedPercentage, "Completed")
+  );
+  statsContainer.appendChild(
+    createProgressContainer(inProgressPercentage, "In Progress")
+  );
+  statsContainer.appendChild(
+    createProgressContainer(notStartedPercentage, "Not Started")
+  );
+
   return statsContainer;
 };
 
-const createCircularProgressBar = (percentage) => {
+const createProgressContainer = (percentage, status) => {
   const progressContainer = document.createElement("div");
+  progressContainer.classList.add("progress-container");
+  const progressHeader = document.createElement("h4");
+
+  progressHeader.textContent = status;
+
+  progressContainer.appendChild(progressHeader);
+  progressContainer.appendChild(createCircularProgressBar(percentage, status));
+
   return progressContainer;
+};
+
+const createCircularProgressBar = (percentage, status) => {
+  const progressBar = document.createElement("div");
+  progressBar.classList.add(
+    `${status.split(" ").join("-").toLowerCase()}-bar-color`
+  );
+  progressBar.role = "progressbar";
+  progressBar.ariaValuenow = percentage;
+  progressBar.ariaValuemin = "0";
+  progressBar.ariaValuemax = "100";
+  progressBar.style.setProperty("--value", percentage);
+  progressBar.dataset.percentage = percentage.toFixed(0);
+
+  return progressBar;
 };
 
 const createTodoListContainer = () => {
