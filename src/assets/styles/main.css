@@ -298,10 +298,13 @@ input[type="text"] {
 
 .project-dashboard {
   display: grid;
+  margin: 25px;
+  grid-template-columns: 2fr 1fr;
   grid-template-areas: "back-button back-button" "badges stats" "todo-list stats";
 }
 
 .back-button {
+  justify-self: flex-start;
   grid-area: back-button;
 }
 
@@ -311,8 +314,91 @@ input[type="text"] {
 
 .stats-container {
   grid-area: stats;
+  color: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  background-color: #00000011;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 30px;
+  width: min-content;
+  align-self: stretch;
+  justify-self: flex-end;
+  box-shadow: 0px 10px 10px var(--dark-blue);
 }
 
 .todo-list-container {
   grid-area: todo-list;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+@keyframes progress {
+  0% {
+    --percentage: 0;
+  }
+  100% {
+    --percentage: var(--value);
+  }
+}
+
+@property --percentage {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+[role="progressbar"] {
+  --percentage: var(--value);
+  --secondary: rgba(116, 116, 116, 0.174);
+  --size: 200px;
+  animation: progress 2s 0.5s forwards;
+  width: var(--size);
+  aspect-ratio: 2 / 1;
+  border-radius: 50% / 100% 100% 0 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+[role="progressbar"].completed-bar-color {
+  --primary: var(--green);
+}
+
+[role="progressbar"].in-progress-bar-color {
+  --primary: rgb(0, 113, 206);
+}
+
+[role="progressbar"].not-started-bar-color {
+  --primary: grey;
+}
+
+[role="progressbar"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    from 0.75turn at 50% 100%,
+    var(--primary) calc(var(--percentage) * 1% / 2.5),
+    var(--secondary) calc(var(--percentage) * 1% / 2.5 + 0.9%)
+  );
+  mask: radial-gradient(at 50% 100%, white 55%, transparent 55.5%);
+  -webkit-mask: radial-gradient(at 50% 100%, #0000 60%, #000 70%);
+}
+
+[role="progressbar"]::after {
+  counter-reset: percentage var(--value);
+  content: attr(data-percentage) "%";
+  font-size: calc(var(--size) / 5);
+  color: var(--dark-blue);
 }
