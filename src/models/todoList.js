@@ -2,9 +2,9 @@ import {
   filterByCompleted,
   filterByInProgress,
   filterByNotStarted,
-} from "../utils/filter.js";
+} from "../helpers/filter.js";
 
-import { sortByDueDate, sortByPriority } from "../utils/sorting.js";
+import { sortByDueDate, sortByPriority } from "../helpers/sorting.js";
 
 const todoList = () => ({
   todoList: [],
