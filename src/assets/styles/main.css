@@ -94,11 +94,6 @@ body {
   width: 10%;
 }
 
-.medal-icon {
-  content: url("/src/assets/images/medal-white.png");
-  width: 10%;
-}
-
 .active .home-icon,
 .tab:hover .home-icon {
   content: url("/src/assets/images/home-blue.png");
@@ -107,11 +102,6 @@ body {
 .active .projects-icon,
 .tab:hover .projects-icon {
   content: url("/src/assets/images/projects-blue.png");
-}
-
-.active .medal-icon,
-.tab:hover .medal-icon {
-  content: url("/src/assets/images/medal-blue.png");
 }
 
 .title-img {

@@ -1,7 +1,6 @@
 import "./assets/styles/main.css";
-import createHomePage from "./components/homePage.js";
-import createAllProjectsPage from "./components/allProjectsPage.js";
-import createAchievementsPage from "./components/achievementsPage.js";
+import createHomePage from "./pages/homePage.js";
+import createAllProjectsPage from "./pages/allProjectsPage.js";
 import { initializeDefaultProjectData } from "./services/projectLocalStorage.js";
 
 initializeDefaultProjectData();
@@ -27,12 +26,4 @@ document.addEventListener("DOMContentLoaded", () => {
 const pageCreators = {
   Home: createHomePage,
   Projects: createAllProjectsPage,
-  Achievements: createAchievementsPage,
-};
-
-const clearDisplay = () => {
-  const contentDiv = document.querySelector("#content");
-  const titleDiv = document.querySelector(".page-title");
-  contentDiv.innerHTML = "";
-  titleDiv.innerHTML = "";
 };
