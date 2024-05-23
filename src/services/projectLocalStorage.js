@@ -1,7 +1,7 @@
 import {
   getRandomDateString,
   setRandomItemStatus,
-} from "../utils/setRandomParameters.js";
+} from "../helpers/setRandomParameters.js";
 import defaultProjectData from "../data/defaultProjectData.json";
 
 const convertDefaultProjectData = () => {
