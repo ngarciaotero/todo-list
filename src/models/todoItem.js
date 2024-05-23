@@ -45,6 +45,30 @@ const todoItem = (
   updateDueDate(newDueDate) {
     this.dueDate = newDueDate;
   },
+
+  getTitle() {
+    return this.title;
+  },
+
+  getDescription() {
+    return this.description;
+  },
+
+  getDueDate() {
+    return this.dueDate;
+  },
+
+  getPriorityStatus() {
+    return this.priority;
+  },
+
+  getInProgressStatus() {
+    return this.completed;
+  },
+
+  getCompletedStatus() {
+    return this.completed;
+  },
 });
 
 const priorityMap = {
