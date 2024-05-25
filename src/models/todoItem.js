@@ -63,7 +63,7 @@ const todoItem = (
   },
 
   getInProgressStatus() {
-    return this.completed;
+    return this.inProgress;
   },
 
   getCompletedStatus() {
