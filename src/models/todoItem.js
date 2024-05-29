@@ -78,6 +78,16 @@ const todoItem = (
     return this.priority;
   },
 
+  getPriorityStringStatus(intValue) {
+    for (const [priorityStringValue, priorityIntValue] of Object.entries(
+      priorityMap
+    )) {
+      if (priorityIntValue === intValue) {
+        return priorityStringValue;
+      }
+    }
+  },
+
   getInProgressStatus() {
     return this.inProgress;
   },
