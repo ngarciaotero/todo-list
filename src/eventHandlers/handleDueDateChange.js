@@ -7,47 +7,29 @@ import {
 } from "../helpers/dateFormatter.js";
 
 const showDatePicker = (project, taskElement, todoItem, dateContainer) => {
-  const originalDueDate = todoItem.getDueDate();
-  const dateInput = createDatePickerInput(originalDueDate);
+  const dateInput = createDatePickerInput(todoItem.getDueDate());
 
   dateInput.addEventListener("change", () =>
-    handleDueDateChange(
-      project,
-      taskElement,
-      todoItem,
-      dateInput,
-      originalDueDate
-    )
+    handleDueDateChange(project, taskElement, todoItem, dateInput)
   );
   dateInput.addEventListener("blur", () =>
-    handleDueDateBlur(
-      project,
-      taskElement,
-      todoItem,
-      originalDueDate,
-      dateContainer
-    )
+    handleDueDateBlur(project, taskElement, todoItem, dateContainer)
   );
 
   dateContainer.replaceChildren(dateInput);
   dateInput.focus();
 };
 
-const createDatePickerInput = (originalDueDate) => {
+const createDatePickerInput = (dueDate) => {
   const dateInput = document.createElement("input");
   dateInput.type = "date";
-  dateInput.value = formatDateForInput(originalDueDate, "yyyy-MM-dd");
+  dateInput.value = formatDateForInput(dueDate, "yyyy-MM-dd");
   return dateInput;
 };
 
-const handleDueDateChange = (
-  project,
-  taskElement,
-  todoItem,
-  dateInput,
-  originalDueDate
-) => {
+const handleDueDateChange = (project, taskElement, todoItem, dateInput) => {
   const newDueDate = parseDateFromInput(dateInput.value);
+  const originalDueDate = todoItem.getDueDate();
 
   if (
     !isNaN(newDueDate.getTime()) &&
@@ -61,21 +43,15 @@ const handleDueDateChange = (
   }
 };
 
-const handleDueDateBlur = (
-  project,
-  taskElement,
-  todoItem,
-  originalDueDate,
-  dateContainer
-) => {
-  const dueDateText = createDueDateText(todoItem, originalDueDate);
+const handleDueDateBlur = (project, taskElement, todoItem, dateContainer) => {
+  const dueDateText = createDueDateText(todoItem);
   dueDateText.addEventListener("click", () =>
     showDatePicker(project, taskElement, todoItem, dateContainer)
   );
   dateContainer.replaceChildren(dueDateText);
 };
 
-const createDueDateText = (todoItem, originalDueDate) => {
+const createDueDateText = (todoItem) => {
   const dueDateText = document.createElement("span");
   dueDateText.textContent = dueOnMonthStringDate(todoItem.getDueDate());
   return dueDateText;
