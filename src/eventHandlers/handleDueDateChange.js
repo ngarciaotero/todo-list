@@ -23,7 +23,7 @@ const showDatePicker = (project, taskElement, todoItem, dateContainer) => {
 const createDatePickerInput = (dueDate) => {
   const dateInput = document.createElement("input");
   dateInput.type = "date";
-  dateInput.value = formatDateForInput(dueDate, "yyyy-MM-dd");
+  dateInput.value = formatDateForInput(dueDate);
   return dateInput;
 };
 
