@@ -25,13 +25,19 @@ const convertUserProjectData = (project) => {
   const todoItems = project
     .getTodoList()
     .getTodoItems()
-    .map((todoItem) => ({
-      title: todoItem.getTitle(),
-      description: todoItem.getDescription(),
-      dueDate: todoItem.getDueDate(),
-      priority: todoItem.getPriority(),
-      status: todoItem.getStatus(),
-    }));
+    .map((todoItem) => {
+      const priorityValue = todoItem.getPriorityStatus();
+      const priorityString =
+        priorityValue === 1 ? "low" : priorityValue === 2 ? "medium" : "high";
+
+      return {
+        title: todoItem.getTitle(),
+        description: todoItem.getDescription(),
+        dueDate: todoItem.getDueDate(),
+        priority: priorityString,
+        status: todoItem.getStatus(),
+      };
+    });
 
   return {
     name: project.getName(),
