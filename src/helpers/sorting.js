@@ -1,7 +1,7 @@
 export const sortByDueDate = (a, b) => {
-  return a.dueDate - b.dueDate;
+  return a.getDueDate() - b.getDueDate();
 };
 
 export const sortByPriority = (a, b) => {
-  return b.priority - a.priority;
+  return b.getPriorityStatus() - a.getPriorityStatus();
 };
