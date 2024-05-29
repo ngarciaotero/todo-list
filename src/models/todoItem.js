@@ -11,6 +11,7 @@ const todoItem = (
   priority: priorityMap[priority.toLowerCase()],
   inProgress: statusMap[status].inProgress,
   completed: statusMap[status].completed,
+  status,
 
   toggleComplete() {
     if (this.inProgress) {
@@ -46,6 +47,23 @@ const todoItem = (
     this.dueDate = newDueDate;
   },
 
+  updateStatus() {
+    const currentStatus = {
+      inProgress: this.getInProgressStatus(),
+      completed: this.getCompletedStatus(),
+    };
+
+    for (const [key, value] of Object.entries(statusMap)) {
+      if (
+        value.inProgress === currentStatus.inProgress &&
+        value.completed === currentStatus.completed
+      ) {
+        this.status = key;
+        return;
+      }
+    }
+  },
+
   getTitle() {
     return this.title;
   },
@@ -68,6 +86,10 @@ const todoItem = (
 
   getCompletedStatus() {
     return this.completed;
+  },
+
+  getStatus() {
+    return this.status;
   },
 });
 
