@@ -79,7 +79,7 @@ const getProjectsData = () => {
   try {
     return JSON.parse(localStorage.getItem("projectList"));
   } catch (error) {
-    console.log("Error retrieving data from localStorage:", error);
+    console.error("Error retrieving data from localStorage:", error);
     return null;
   }
 };
