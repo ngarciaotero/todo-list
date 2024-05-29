@@ -12,8 +12,4 @@ const dueOnMonthStringDate = (date) => {
   return `Due on ${format(date, "MMMM do, yyyy")}`;
 };
 
-export {
-  formatDateForInput,
-  parseDateFromInput,
-  dueOnMonthStringDate,
-};
+export { formatDateForInput, parseDateFromInput, dueOnMonthStringDate };
