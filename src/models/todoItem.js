@@ -14,20 +14,18 @@ const todoItem = (
   status,
 
   toggleComplete() {
-    if (this.inProgress) {
+    this.completed = !this.completed;
+
+    if (this.completed && this.inProgress) {
       this.inProgress = false;
-      this.completed = true;
-    } else {
-      this.completed = !this.completed;
     }
   },
 
   toggleInProgress() {
-    if (this.completed) {
+    this.inProgress = !this.inProgress;
+
+    if (this.inProgress && this.completed) {
       this.completed = false;
-      this.inProgress = true;
-    } else {
-      this.inProgress = !this.inProgress;
     }
   },
 
