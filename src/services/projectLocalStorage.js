@@ -84,4 +84,20 @@ const getProjectsData = () => {
   }
 };
 
-export { initializeDefaultProjectData, saveUserProjectData, getProjectsData };
+const updateTodoItemStorage = (updatedProject) => {
+  const existingProjectsData = getProjectsData();
+  const updatedProjectsData = existingProjectsData.map((projectData) => {
+    if (projectData.name === updatedProject.getName()) {
+      return convertUserProjectData(updatedProject);
+    }
+    return projectData;
+  });
+  storeProjectsData(updatedProjectsData);
+};
+
+export {
+  initializeDefaultProjectData,
+  saveUserProjectData,
+  getProjectsData,
+  updateTodoItemStorage,
+};
