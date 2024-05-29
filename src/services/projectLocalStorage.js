@@ -27,8 +27,7 @@ const convertUserProjectData = (project) => {
     .getTodoItems()
     .map((todoItem) => {
       const priorityValue = todoItem.getPriorityStatus();
-      const priorityString =
-        priorityValue === 1 ? "low" : priorityValue === 2 ? "medium" : "high";
+      const priorityString = todoItem.getPriorityStringStatus(priorityValue);
 
       return {
         title: todoItem.getTitle(),
