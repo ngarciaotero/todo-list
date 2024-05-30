@@ -94,9 +94,24 @@ const updateTodoItemStorage = (updatedProject) => {
   storeProjectsData(updatedProjectsData);
 };
 
+const removeTodoItemFromStorage = (project, todoItem) => {
+  const existingProjectsData = getProjectsData();
+  const updatedProjectsData = existingProjectsData.map((projectData) => {
+    if (projectData.name === project.getName()) {
+      const updateTodoItems = projectData.todoItems.filter(
+        (item) => item.title !== todoItem.getTitle()
+      );
+      return { ...projectData, todoItems: updateTodoItems };
+    }
+    return projectData;
+  });
+  storeProjectsData(updatedProjectsData);
+};
+
 export {
   initializeDefaultProjectData,
   saveUserProjectData,
   getProjectsData,
   updateTodoItemStorage,
+  removeTodoItemFromStorage,
 };
