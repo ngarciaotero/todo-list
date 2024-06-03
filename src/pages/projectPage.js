@@ -1,6 +1,6 @@
 import { clearContentTitleDisplay } from "../ui/clearDisplay.js";
 import {
-  createProjectPageHeader,
+  createPageHeader,
   createProjectPageHeaderImg,
 } from "../ui/createTitle.js";
 import { createProjectPageDashboard } from "../ui/createContent.js";
@@ -14,7 +14,7 @@ const createProjectPage = (project, previousPage) => {
   const projectName = project.getName();
   const projectPath = project.getImagePath();
 
-  titleContainer.appendChild(createProjectPageHeader(projectName));
+  titleContainer.appendChild(createPageHeader(projectName));
   titleContainer.appendChild(createProjectPageHeaderImg(projectPath));
   contentContainer.appendChild(
     createProjectPageDashboard(project, previousPage)

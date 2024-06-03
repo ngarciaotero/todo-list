@@ -13,4 +13,4 @@ const clearContentContainer = () => {
   contentDiv.innerHTML = "";
 };
 
-export { clearContentTitleDisplay };
+export { clearContentTitleDisplay, clearContentContainer };

@@ -46,8 +46,8 @@ const convertUserProjectData = (project) => {
 };
 
 const initializeDefaultProjectData = () => {
-  const existingProjectData = getProjectsData();
-  if (!existingProjectData) {
+  const existingProjectsData = getProjectsData();
+  if (!existingProjectsData) {
     const convertedData = convertDefaultProjectData();
     storeProjectsData(convertedData);
   }

@@ -17,6 +17,11 @@ const todoList = () => ({
     this.calculatePercentages();
   },
 
+  addItemToFront(item) {
+    this.todoList.unshift(item);
+    this.calculatePercentages();
+  },
+
   removeTodoItem(item) {
     const index = this.todoList.indexOf(item);
     this.todoList.splice(index, 1);
