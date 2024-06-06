@@ -13,6 +13,28 @@ const projectList = () => ({
   getProjects() {
     return this.projectList;
   },
+
+  totalCompletedTasksPercentage() {
+    return (this.calculateCompletedTasks() / this.calculateTotalTasks()) * 100;
+  },
+
+  calculateTotalTasks() {
+    let totalTasks = 0;
+    this.projectList.forEach((project) => {
+      const todoList = project.getTodoList();
+      totalTasks += todoList.getTodoItems().length;
+    });
+    return totalTasks;
+  },
+
+  calculateCompletedTasks() {
+    let completedTasks = 0;
+    this.projectList.forEach((project) => {
+      const todoList = project.getTodoList();
+      completedTasks += todoList.getCompletedFilteredList().length;
+    });
+    return completedTasks;
+  },
 });
 
 export default projectList;
