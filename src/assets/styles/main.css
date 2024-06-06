@@ -700,3 +700,42 @@ input[type="radio"]:checked + .checkdot {
 .no-tasks-img {
   height: 300px;
 }
+
+.badge-container {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  align-items: center;
+}
+
+.all-badges {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.badge-img {
+  width: 60px;
+}
+
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 5px;
+}
+
+.badge-overlay {
+  position: absolute;
+  border-radius: 35px;
+  background-image: url("/src/assets/images/lock.png");
+  background-repeat: no-repeat;
+  background-position: top 10px center;
+  background-size: 45px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 245, 245, 0.819);
+}
