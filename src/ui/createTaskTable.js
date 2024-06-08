@@ -1,4 +1,5 @@
 import { createTaskElement } from "./createTaskElement.js";
+import { createTimeSensitiveTaskElement } from "./createDueSoonTaskElement.js";
 import { renderNoTasksMessage } from "./createNoTasksMessage.js";
 
 const createTaskTable = (project, todoItems) => {
@@ -17,4 +18,18 @@ const createTaskTable = (project, todoItems) => {
   return taskTableContainer;
 };
 
-export { createTaskTable };
+const createDueSoonTaskTable = (dueSoonTaskList) => {
+  const taskTableContainer = document.createElement("div");
+  taskTableContainer.classList.add("due-soon-table-container");
+  dueSoonTaskList.forEach(({ task, project }) => {
+    const dueSoonElement = createTimeSensitiveTaskElement(
+      task,
+      project,
+      "due-soon-list-item"
+    );
+    taskTableContainer.appendChild(dueSoonElement);
+  });
+  return taskTableContainer;
+};
+
+export { createTaskTable, createDueSoonTaskTable };
