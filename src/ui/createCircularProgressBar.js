@@ -16,6 +16,7 @@ const progressBarConfig = {
   Completed: "completed-bar-color",
   "In Progress": "in-progress-bar-color",
   "Not Started": "not-started-bar-color",
+  Overdue: "overdue-bar-color",
 };
 
 export { createCircularProgressBar };

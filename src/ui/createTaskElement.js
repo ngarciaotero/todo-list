@@ -16,6 +16,9 @@ import {
   displayRemoveBtn,
   hideRemoveBtn,
 } from "./createRemoveBtn.js";
+import { dueInDaysString } from "../helpers/dateFormatter.js";
+import { createProjectPage } from "../pages/projectPage.js";
+import createHomePage from "../pages/homePage.js";
 
 const createTaskElement = (project, todoItem) => {
   const taskElement = document.createElement("div");
@@ -249,4 +252,34 @@ const applyPriorityClass = (taskElement, todoItem) => {
   taskElement.classList.add(`priority-${todoItem.getPriorityStatus()}`);
 };
 
-export { createTaskElement };
+const createTimeSensitiveTaskElement = (task, project, className) => {
+  const taskElement = document.createElement("div");
+  applyPriorityClass(taskElement, task);
+  taskElement.classList.add(className);
+  const taskTitle = task.getTitle();
+  const taskDueDate = task.getDueDate();
+
+  const titleText = createSensitiveTaskTitle(taskTitle);
+  const dueDateText = createSensitiveDueDateText(taskDueDate);
+  taskElement.appendChild(titleText);
+  taskElement.appendChild(dueDateText);
+
+  taskElement.addEventListener("click", () => {
+    createProjectPage(project, createHomePage);
+  });
+  return taskElement;
+};
+
+const createSensitiveTaskTitle = (taskTitle) => {
+  const titleTextContainer = document.createElement("div");
+  titleTextContainer.textContent = taskTitle;
+  return titleTextContainer;
+};
+
+const createSensitiveDueDateText = (taskDueDate) => {
+  const dateTextContainer = document.createElement("div");
+  dateTextContainer.textContent = dueInDaysString(taskDueDate);
+  return dateTextContainer;
+};
+
+export { createTaskElement, createTimeSensitiveTaskElement };

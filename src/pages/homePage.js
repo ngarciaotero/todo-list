@@ -11,9 +11,7 @@ const createHomePage = () => {
 
   dashboardContainer.appendChild(createHomePageDashboard());
   titleContainer.appendChild(createPageHeader("Home"));
-  titleContainer.appendChild(
-    createProjectPageHeaderImg("kitten-scribbles.png")
-  );
+  titleContainer.appendChild(createProjectPageHeaderImg("kitten-sitting.png"));
   contentContainer.appendChild(dashboardContainer);
 };
 

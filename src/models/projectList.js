@@ -21,6 +21,18 @@ const projectList = () => ({
     return (this.calculateCompletedTasks() / this.calculateTotalTasks()) * 100;
   },
 
+  totalNotStartedTasksPercentage() {
+    return (this.calculateNotStartedTasks() / this.calculateTotalTasks()) * 100;
+  },
+
+  totalInProgressTasksPercentage() {
+    return (this.calculateInProgressTasks() / this.calculateTotalTasks()) * 100;
+  },
+
+  totalOverdueTasksPercentage() {
+    return (this.getOverdueTasks().length / this.calculateTotalTasks()) * 100;
+  },
+
   calculateTotalTasks() {
     let totalTasks = 0;
     this.projectList.forEach((project) => {
@@ -37,6 +49,24 @@ const projectList = () => ({
       completedTasks += todoList.getCompletedFilteredList().length;
     });
     return completedTasks;
+  },
+
+  calculateNotStartedTasks() {
+    let notStartedTasks = 0;
+    this.projectList.forEach((project) => {
+      const todoList = project.getTodoList();
+      notStartedTasks += todoList.getNotStartedFilteredList().length;
+    });
+    return notStartedTasks;
+  },
+
+  calculateInProgressTasks() {
+    let inProgressTasks = 0;
+    this.projectList.forEach((project) => {
+      const todoList = project.getTodoList();
+      inProgressTasks += todoList.getInProgressFilteredList().length;
+    });
+    return inProgressTasks;
   },
 
   getTasksByDueDateCondition(condition, daysThreshold = 30) {

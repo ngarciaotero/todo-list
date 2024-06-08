@@ -2,6 +2,11 @@ import { createBackBtn } from "./createBackBtn.js";
 import { createStatsContainer } from "./createStatsContainer.js";
 import { createTodoListContainer } from "./createTodoListContainer.js";
 import { createBadgesContainer } from "./createBadgesContainer.js";
+import {
+  createDueSoonContainer,
+  createOverdueContainer,
+} from "./createTimeSensitiveContainer.js";
+import { createFocusProjectsContainer } from "./createFocusProjectsContainer.js";
 
 const createProjectPageDashboard = (project, previousPage) => {
   const dashboardContainer = document.createElement("div");
@@ -32,6 +37,9 @@ const createHomePageDashboard = () => {
   dashboardContainer.classList.add("home-dashboard");
 
   dashboardContainer.appendChild(createBadgesContainer());
+  dashboardContainer.appendChild(createDueSoonContainer());
+  dashboardContainer.appendChild(createOverdueContainer());
+  dashboardContainer.appendChild(createFocusProjectsContainer());
   return dashboardContainer;
 };
 

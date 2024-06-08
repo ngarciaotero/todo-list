@@ -391,6 +391,11 @@ input[type="text"] {
   color: grey;
 }
 
+[role="progressbar"].overdue-bar-color {
+  --primary: rgb(255, 86, 86);
+  color: rgb(250, 109, 109);
+}
+
 .default-bar-color {
   --primary: black;
 }
@@ -701,11 +706,26 @@ input[type="radio"]:checked + .checkdot {
   height: 300px;
 }
 
+.home-dashboard {
+  display: grid;
+  grid-template-areas: "badges badges" "due-soon-table overdue-table" "progress-bars progress-bars";
+  grid-template-columns: 1fr 1fr;
+  padding: 45px 25px 20px 25px;
+  gap: 20px;
+  color: var(--mid-blue);
+}
+
 .badge-container {
+  grid-area: badges;
   display: flex;
   flex-direction: column;
-  background-color: whitesmoke;
   align-items: center;
+  justify-self: center;
+  padding: 0 10px;
+}
+
+.badge-container h4:first-child {
+  color: rgb(28, 73, 126);
 }
 
 .all-badges {
@@ -715,7 +735,7 @@ input[type="radio"]:checked + .checkdot {
 }
 
 .badge-img {
-  width: 60px;
+  width: 45px;
 }
 
 .badge {
@@ -723,7 +743,11 @@ input[type="radio"]:checked + .checkdot {
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding: 5px;
+  padding: 6px;
+}
+
+.badge h6 {
+  margin: 10px 0;
 }
 
 .badge-overlay {
@@ -738,4 +762,81 @@ input[type="radio"]:checked + .checkdot {
   width: 100%;
   height: 100%;
   background-color: rgba(245, 245, 245, 0.819);
+}
+
+.due-soon-list-item,
+.overdue-list-item {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 10px;
+  padding: 6px 15px;
+  border-bottom: 3px solid var(--cream);
+  cursor: pointer;
+}
+
+.due-soon-container {
+  grid-area: due-soon-table;
+}
+.overdue-container {
+  grid-area: overdue-table;
+}
+
+.due-soon-container,
+.overdue-container,
+.badge-container,
+.focus-stats-container {
+  border-radius: 5px;
+  background-color: whitesmoke;
+  border: 3px solid var(--light-blue);
+}
+
+.due-soon-table-container,
+.overdue-table-container {
+  max-height: 150px;
+  overflow: auto;
+}
+
+.due-soon-container h4,
+.overdue-container h4 {
+  margin-left: 15px;
+  color: rgb(28, 73, 126);
+}
+
+.overdue-list-item div:last-child {
+  color: rgb(228, 92, 92);
+}
+
+.due-soon-list-item div:last-child {
+  color: rgb(90, 139, 90);
+}
+
+.home-stats-container {
+  display: flex;
+  gap: 130px;
+  justify-content: center;
+}
+
+.focus-stats-container {
+  grid-area: progress-bars;
+  align-items: center;
+  justify-self: center;
+  display: flex;
+  padding: 0 50px;
+}
+
+.focus-stats-container h4:first-child {
+  color: rgb(28, 73, 126);
+  border-right: 1px solid var(--mid-blue);
+  font-size: 20px;
+}
+
+.home-in-progress-bar,
+.home-not-started-bar,
+.home-overdue-bar {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  flex-basis: 185px;
+  color: var(--mid-blue);
 }
