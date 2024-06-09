@@ -76,8 +76,10 @@ const projectList = () => ({
     this.projectList.forEach((project) => {
       const todoList = project.getTodoList();
       const notStartedTasks = todoList.getNotStartedFilteredList();
+      const inProgressTasks = todoList.getInProgressFilteredList();
+      const allRelevantTasks = [...notStartedTasks, ...inProgressTasks];
 
-      const tasksMatchingCondition = notStartedTasks.filter((task) => {
+      const tasksMatchingCondition = allRelevantTasks.filter((task) => {
         const dueDate = task.getDueDate();
         const daysDiff = differenceInDays(dueDate, currentDate);
         return condition(daysDiff, daysThreshold);
