@@ -1,10 +1,16 @@
 const getRandomDateString = (daysRange) => {
   const today = new Date();
   const randomDays = Math.floor(Math.random() * daysRange + 1);
-  const futureDate = new Date(
-    today.getTime() + randomDays * 24 * 60 * 60 * 1000
+  const isFuture = getRandomBoolean();
+  const multiplier = isFuture ? 1 : -1;
+  const targetDate = new Date(
+    today.getTime() + multiplier * randomDays * 24 * 60 * 60 * 1000
   );
-  return futureDate.toISOString().split("T")[0];
+  return targetDate.toISOString().split("T")[0];
+};
+
+const getRandomBoolean = () => {
+  return Math.random() < 0.5;
 };
 
 const setRandomItemStatus = () => {
