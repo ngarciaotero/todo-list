@@ -108,10 +108,24 @@ const removeTodoItemFromStorage = (project, todoItem) => {
   storeProjectsData(updatedProjectsData);
 };
 
+const removeProjectFromStorage = (projectToRemove) => {
+  const existingProjectsData = getProjectsData();
+  if (!existingProjectsData) {
+    console.warn("No projects found in localStorage");
+    return;
+  }
+  const updatedProjectsData = existingProjectsData.filter(
+    (projectData) => projectData.name !== projectToRemove.getName()
+  );
+
+  storeProjectsData(updatedProjectsData);
+};
+
 export {
   initializeDefaultProjectData,
   saveUserProjectData,
   getProjectsData,
   updateTodoItemStorage,
   removeTodoItemFromStorage,
+  removeProjectFromStorage,
 };

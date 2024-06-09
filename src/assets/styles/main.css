@@ -526,7 +526,8 @@ input[type="text"] {
   width: 180px;
 }
 
-.remove-item-btn {
+.remove-item-btn,
+.remove-project-btn {
   position: absolute;
   top: -5px;
   right: -5px;
@@ -540,7 +541,8 @@ input[type="text"] {
   color: grey;
 }
 
-.remove-item-btn:hover {
+.remove-item-btn:hover,
+.remove-project-btn:hover {
   background-color: rgba(255, 0, 0, 0.649);
   color: white;
 }

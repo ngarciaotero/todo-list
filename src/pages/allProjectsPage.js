@@ -5,6 +5,11 @@ import {
 } from "../ui/createTitle.js";
 import { createAddProjectBtn } from "../ui/createAddProjectBtn.js";
 import { createProjectListFromData } from "../services/projectListFactory.js";
+import {
+  createRemoveProjectBtn,
+  displayRemoveBtn,
+  hideRemoveBtn,
+} from "../ui/createRemoveBtn.js";
 
 const createAllProjectsPage = () => {
   const contentContainer = document.querySelector("#content");
@@ -23,17 +28,18 @@ const renderProjectList = () => {
   allProjectsContainer.classList.add("dashboard-all-projects");
   allProjectsContainer.appendChild(createAddProjectBtn());
 
-  const projectList = createProjectListFromData().getProjects();
+  const projectList = createProjectListFromData();
+  const projects = createProjectListFromData().getProjects();
 
-  projectList.forEach((projectData) => {
-    const projectDisplay = createProjectDisplayBox(projectData);
+  projects.forEach((projectData) => {
+    const projectDisplay = createProjectDisplayBox(projectData, projectList);
     allProjectsContainer.appendChild(projectDisplay);
   });
 
   return allProjectsContainer;
 };
 
-const createProjectDisplayBox = (project) => {
+const createProjectDisplayBox = (project, projectList) => {
   const projectContainer = document.createElement("div");
   projectContainer.classList.add("project-box");
   const projectName = project.getName();
@@ -54,9 +60,18 @@ const createProjectDisplayBox = (project) => {
   projectContainer.classList.add("project-box");
   projectImage.classList.add("project-img");
 
+  projectContainer.appendChild(createRemoveProjectBtn(project, projectList));
   projectContainer.appendChild(projectHeader);
   projectContainer.appendChild(projectImage);
   projectContainer.appendChild(createProgressBar(projectPercentComplete));
+
+  projectContainer.addEventListener("mouseover", () => {
+    displayRemoveBtn(projectContainer, "remove-project-btn");
+  });
+
+  projectContainer.addEventListener("mouseout", () => {
+    hideRemoveBtn(projectContainer, "remove-project-btn");
+  });
 
   projectContainer.addEventListener("click", () =>
     createProjectPage(project, createAllProjectsPage)

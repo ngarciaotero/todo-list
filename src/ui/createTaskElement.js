@@ -38,11 +38,11 @@ const createTaskElement = (project, todoItem) => {
   taskElement.appendChild(createRemoveItemBtn(project, todoItem));
 
   taskElement.addEventListener("mouseover", () => {
-    displayRemoveBtn(taskElement);
+    displayRemoveBtn(taskElement, "remove-item-btn");
   });
 
   taskElement.addEventListener("mouseout", () => {
-    hideRemoveBtn(taskElement);
+    hideRemoveBtn(taskElement, "remove-item-btn");
   });
 
   return taskElement;
