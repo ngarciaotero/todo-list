@@ -1,11 +1,10 @@
-import { getProjectsData } from "../services/projectLocalStorage.js";
-import { createProjectFromData } from "../services/projectFactory.js";
 import { createProjectPage } from "./projectPage.js";
 import {
   createPageHeader,
   createAllProjectPageHeaderImg,
 } from "../ui/createTitle.js";
 import { createAddProjectBtn } from "../ui/createAddProjectBtn.js";
+import { createProjectListFromData } from "../services/projectListFactory.js";
 
 const createAllProjectsPage = () => {
   const contentContainer = document.querySelector("#content");
@@ -24,15 +23,13 @@ const renderProjectList = () => {
   allProjectsContainer.classList.add("dashboard-all-projects");
   allProjectsContainer.appendChild(createAddProjectBtn());
 
-  const storedData = getProjectsData();
+  const projectList = createProjectListFromData().getProjects();
 
-  if (storedData && Array.isArray(storedData)) {
-    storedData.forEach((projectData) => {
-      const newProject = createProjectFromData(projectData);
-      const projectDisplay = createProjectDisplayBox(newProject);
-      allProjectsContainer.appendChild(projectDisplay);
-    });
-  }
+  projectList.forEach((projectData) => {
+    const projectDisplay = createProjectDisplayBox(projectData);
+    allProjectsContainer.appendChild(projectDisplay);
+  });
+
   return allProjectsContainer;
 };
 
