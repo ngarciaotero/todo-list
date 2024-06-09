@@ -3,8 +3,10 @@ import createHomePage from "./pages/homePage.js";
 import { createAllProjectsPage } from "./pages/allProjectsPage.js";
 import { initializeDefaultProjectData } from "./services/projectLocalStorage.js";
 import { clearContentTitleDisplay } from "./ui/clearDisplay.js";
+import { renderAttributionsModal } from "./ui/renderAttributionsModal.js";
 
 initializeDefaultProjectData();
+renderAttributionsModal();
 
 document.addEventListener("DOMContentLoaded", () => {
   createHomePage();

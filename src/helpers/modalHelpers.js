@@ -78,6 +78,7 @@ const addOverlay = () => {
   overlay.addEventListener("click", () => {
     closeModal(".add-task-modal");
     closeModal(".add-project-modal");
+    closeModal(".attribution-modal");
   });
 
   document.body.appendChild(overlay);
